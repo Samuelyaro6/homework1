@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html id='custDomain'>
+<head>
+<meta charset='UTF-8'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1310fd97f1","applicationID":"71497409","transactionName":"IVZWR0tbWF4BFxhWVw1SSxxYREReHTpUW1wHZldBZkZRUwA6VkZMC1pUVg==","queueTime":0,"applicationTime":116,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<title>Learn Enough Command Line to Be Dangerous |  Learn Enough to Be Dangerous</title>
+<script src='//cdn.optimizely.com/js/1197428788.js' type='text/javascript'></script>
+<script defer='defer' src='//use.fontawesome.com/releases/v5.0.6/js/all.js'></script>
+<script src='//use.typekit.net/nbl5sqs.js'></script>
+<script>
+try{Typekit.load();}catch(e){}
+</script>
+<link href='/favicon-le.png' rel='icon'>
+<link href='/le/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+<link rel="stylesheet" media="screen" href="https://www.softcover.io/assets/novo_le-0f7d2f1b8f90918eadc06bef52861a492844c3a7d09b09f107d775202d0ab266.css" />
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="n8Rg7xAn6XmUM4FUWMXW14WVuVK6y//RR28MeqWNr/4ABoEHgIubzpxn9ynVqCyLI/Nn0DwMLZA32GHHTZyMuQ==" />
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='https://www.softcover.io/books/28fdb94f/learn_enough_command_line' property='og:url'>
+<meta content='Learn Enough Command Line to Be Dangerous' property='og:title'>
+<meta content='A tutorial introduction to the Unix command line' property='og:description'>
+<meta content='Softcover.io' property='og:site_name'>
+<meta content='https://softcover.s3.amazonaws.com/636/learn_enough_command_line/images/cover-web.png' property='og:image'>
+<meta content='https://softcover.s3.amazonaws.com/636/learn_enough_command_line/images/cover-web.png' property='og:image:secure_url'>
+<meta content='image/png' property='og:image:type'>
+<meta content='500' property='og:image:width'>
+<meta content='500' property='og:image:height'>
+<link href="https://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">
+<script>
+  window.Config = {
+    env: "production",
+    bucket: "softcover",
+    previewBucket: "softcover-cloud",
+    userId: false
+  }
+</script>
+<script src='//code.jquery.com/jquery-2.0.3.min.js' type='text/javascript'></script>
+<script src='//cdn.jsdelivr.net/formalize/0.1/js/jquery.formalize.min.js' type='text/javascript'></script>
+<script src='//cdn.jsdelivr.net/underscorejs/1.6.0/underscore-min.js' type='text/javascript'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js' type='text/javascript'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' type='text/javascript'></script>
+<script src='https://js.stripe.com/v3/' type='text/javascript'></script>
+<script src='https://www.google.com/jsapi' type='text/javascript'></script>
+<script src="https://www.softcover.io/assets/application-7a9777beae5b7c8b9f5cc18773c8c4d356cdb7bb927a0f179ad6bad7c5eb308e.js"></script>
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/jquery.qtip.min.css' rel='stylesheet'>
+<script src='//cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/jquery.qtip.min.js' type='text/javascript'></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('require', 'linker');
+  ga('linker:autoLink', ['www.learnenough.com', 'softcover.io']);
+
+  ga('create', 'UA-46858978-1', 'softcover.io', {'allowLinker': true});
+  ga('send', 'pageview');
+
+  ga('create', 'UA-46858978-2', 'auto', {
+    'name': 'book',
+    'allowLinker': true
+  });
+
+  ga('book.send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '120259081996654', {
+    em: '',
+  });
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=120259081996654&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<meta content='n4FYakgLVe1smRPU7gMdoXLgAUHVQDHevdSPlKGqLO4' name='google-site-verification'>
+</head>
+<body class='course'>
+<div class='container'>
+<div class='site-header'>
+<div class='side-menu-toggle'>
+<a class="side-menu-close" href="javascript://"><i class='fas fa-times'></i>
+</a><a class="side-menu-open" href="javascript://"><i class='fas fa-bars'></i>
+</a></div>
+<nav class='nav'>
+<a class="logoLink artLogo" href="/"><div class='svg le-logo'><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 801 1041" style="enable-background:new 0 0 801 1041;" xml:space="preserve">
+<path d="M569.9,478.6l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H410.5l-3.5,3.5v358.6l1,2.5l24.3,24.3l1.9,0.5l0.5,0.5h135.1l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H488v-89.9h77l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H488v-81H569.9z M544.2,412.6l17.3,17.3H436.2L419,412.6H544.2z M414,417.6l17.3,17.3v348.7L414,766.3V417.6z M544.2,729.5l17.3,17.3H488v-17.3H544.2z M539.2,566.6l17.3,17.3H488v-17.3H539.2z M484.5,471.6l-3.5,3.5v112.3l3.5,3.5h77v34.7h-77l-3.5,3.5v121.2l3.5,3.5h81.9v34.7H438.3V436.9h128.1v34.7H484.5z"/>
+<path d="M401.5,747.8l-24.3-24.3l-2.5-1h-55.7V433.4l-0.2-0.2l-0.8-2.3l-24.3-24.3l-2.5-1h-49.7l-3.5,3.5v358.6l1,2.5l24.3,24.3l1.9,0.5l0.6,0.6H399l3.5-3.5v-41.7L401.5,747.8z M373.3,729.5l17.3,17.3h-71.5v-17.3H373.3z M307.1,429.9h-39.8l-17.3-17.3h39.8L307.1,429.9z M245.1,417.6l17.3,17.3v348.7l-17.3-17.3V417.6z M395.5,788.5H269.4V436.9h42.7v313.4l3.5,3.5h79.9V788.5z"/>
+<path d="M691.8,600.3c0-77.2-30-149.7-84.6-204.3c-47.3-47.3-108.2-76.2-173.9-83c0.4-22.2,0.6-35.3,0.6-35.7l-2.6-3.8c-1.8-0.6-3.5-2.2-5.1-4.2l5.1,0c1.8,0.1,22.1,0.8,33.2-11.2c5.5-6,8.5-14,8.5-23.4l0.1-13.3l-3.5-3.5l-16-0.1l-3.5,3.5l-0.1,13.3c0,3.3-0.7,5.5-2.4,7.3c-3.7,4-12.4,4.9-15.4,4.9l-11.9,0c1.4-13.4,3.7-39.7,3.9-72.2c0.1-34.4-5.7-68.9-6.6-73.7c4.9-5.8,7.6-13.5,7.6-21.6C425.2,62,413,47.9,398,47.8c0,0-0.1,0-0.1,0c-15,0-27.2,14-27.3,31.2c0,8.1,2.6,15.8,7.5,21.7c-0.9,4.8-7,39.3-7.2,73.6c-0.1,32.5,2,58.9,3.3,72.3l-11.1,0c-1.8-0.1-22.1-0.8-33.2,11.2c-5.5,6-8.5,14-8.5,23.4l-0.1,13.3l3.5,3.5l16.2,0.1l3.5-3.5l0.1-13.3c0-3.3,0.7-5.5,2.4-7.3c3.7-4,12.3-4.9,15.3-4.9l5.9,0c-1.6,1.9-3.4,3.5-5.2,4.1l-2.6,3.8c0,0.5,0.2,14.2,0.6,37.4c-61.2,8.9-117.8,37.1-162.3,81.6C144.1,450.6,114,523.1,114,600.3s30,149.7,84.6,204.3c49,49,112.4,78.2,180.7,83.7c6.4,96.9,11.7,103.7,14.1,106.6l3.3,2.6l2.9-2.6c2.4-2.9,7.8-9.7,14.3-105.9c73-2.7,141.3-32.4,193.2-84.4C661.8,750,691.8,677.5,691.8,600.3z M377.6,79.1c0.1-13.4,9.1-24.2,20.3-24.2c0,0,0,0,0.1,0c7.7,0,14.5,5.3,17.8,13l-10.6-4.3c1.1,1.6,2.1,3.4,2.8,5.5l9.4,3.8c0.5,2,0.7,4.2,0.7,6.4c0,0.2,0,0.5,0,0.7l-8.4-3.4c0.1,0.8,0.1,1.7,0.1,2.5c0,0.6,0,1.2-0.1,1.8l8,3.2c-0.4,2.1-1,4.2-1.8,6.1l-7.3-2.9c-0.4,1.3-0.9,2.6-1.4,3.7l6.8,2.8c-0.6,1-1.3,1.9-2,2.8c-0.7,0.8-1.5,1.6-2.3,2.3l-0.8-0.3l-5.3-2.2c-1.1,1.2-2.3,2.1-3.6,2.9l5.7,2.3c-2.5,1.2-5.1,1.9-7.9,1.9c-5.3,0-10.3-2.5-14.1-7C379.8,91.9,377.6,85.7,377.6,79.1z M377.9,174.4c0.1-28.2,4.4-57,6.3-68.1c4.1,2.7,8.7,4.2,13.5,4.2c0,0,0.1,0,0.1,0c4.8,0,9.4-1.4,13.5-4.1c0.2,1.3,0.5,2.9,0.7,4.7l-2.1-0.9l-2.9,3.1l5.7,2.3c0.3,2.2,0.6,4.6,1,7.3l-17.4-7.1c0.2,1.4,0.4,3,0.6,4.6l17.3,7c0.3,2.3,0.5,4.7,0.8,7.2l-17.2-7c0.2,1.5,0.3,3,0.5,4.5l17.2,7c0.2,2.3,0.4,4.7,0.6,7.1l-19.6-8c-1.7,0.1-3.7-0.4-3.7-0.4s0.8,1.7,1.9,4l21.7,8.8c0.2,2.3,0.3,4.7,0.4,7l-18.3-7.4c0.9,2.1,1.5,3.9,1.7,5l16.8,6.8c0.1,2.3,0.1,4.6,0.2,6.9l-16.6-6.7c0.1,1.5,0.1,2.9,0.1,4.4l16.5,6.7c0,0.4,0,0.8,0,1.2c0,1.9,0,3.8,0,5.7l-16.7-6.8c-1.1,1.7-5.8-0.2-5.8-0.2s0.4,1,0.9,2.5l21.6,8.7c0,2.3-0.1,4.6-0.2,6.8l-18.6-7.5c0.6,1.8,1.2,3.6,1.6,5l16.9,6.8c-0.1,2.3-0.2,4.6-0.3,6.8l-16.2-6.6c0,1.5-0.1,2.9-0.2,4.3l16.2,6.6c-0.1,2.3-0.2,4.5-0.4,6.7l-16.1-6.5c0,0.7-0.1,1.4-0.1,2.1c0,0.9-0.4,1.4-0.8,1.8l16.8,6.8c-0.1,2.3-0.3,4.5-0.5,6.7l-20-8.1c0.3,1.4,0.7,3.1,1.1,4.7l18.6,7.6c-0.2,2.3-0.4,4.6-0.6,6.6l-16.6-6.8c0.3,1.8,0.4,3.3,0.4,4.1c0,0.1,0,0.2,0,0.3l15.9,6.5c-0.2,2.5-0.5,4.7-0.7,6.6l-15.9-6.4c-0.1,1.5-0.3,2.9-0.4,4.2l8,3.2l-23.7-0.1C380,233.6,377.8,207,377.9,174.4z M362.3,262.1c-1.4,0-14,0.2-20.4,7.1c-2.8,3-4.2,7-4.2,12l0,9.8l-9.2,0l0-9.8c0-7.5,2.3-14,6.6-18.6l0,0c9.1-9.8,27.6-9,27.8-9l69.2,0.2c1.4,0,14.1-0.2,20.6-7.1c2.8-3,4.2-7,4.2-12l0-9.8l9,0l0,9.8c0,7.5-2.3,14-6.6,18.6c-9.1,9.8-27.6,9-27.8,9L362.3,262.1z M407.6,348.5l1.1,0.4h-1.1L407.6,348.5z M403.6,348.9h-5.3l-3.5-79.8l17.2,0.1L403.6,348.9z M408.1,344.3l0.7-6.6l15.9,6.4c0,1.6-0.1,3.1-0.1,4.7h-5.2L408.1,344.3z M409.2,333.6l0.7-6.6l15,6.1c0,2.2-0.1,4.5-0.1,6.8L409.2,333.6z M410.3,322.9l0.7-6.6l14.1,5.7c0,2.2-0.1,4.5-0.1,6.8L410.3,322.9z M411.5,312.2l0.7-6.6l13.1,5.3c0,2.2-0.1,4.5-0.1,6.8L411.5,312.2z M412.6,301.4l0.7-6.6l12.2,4.9c0,2.1-0.1,4.4-0.1,6.8L412.6,301.4z M413.7,290.7l0.7-6.6l11.3,4.6c0,2-0.1,4.3-0.1,6.8L413.7,290.7z M414.9,280l0.7-6.6l5.5,2.2c1.5,1.6,3.1,3,4.8,4c0,1.2,0,2.8-0.1,4.8L414.9,280z M416,269.3L416,269.3l0.3,0c0,0.1,0.1,0.1,0.1,0.2L416,269.3z M390.3,348.9h-20.7c-0.7-36.5-1.1-61.7-1.2-69.5c3.9-2.4,7.2-6.4,9.6-10.3l8.8,0L390.3,348.9z M392.6,951.2c-2-18-4.2-44.3-6.4-82.7c-0.3-5.2-0.6-10.6-0.9-16.2h7.4l2.5,115.9L392.6,951.2z M400.7,959.3l-0.1-20.9l1,0.2C401.4,940.3,400.8,957.7,400.7,959.3z M401.6,934.5l-1-0.4v-6.9l1.7,0.7C402.1,930.2,401.8,932.4,401.6,934.5z M402.7,923.8l-2.2-0.9v-6.9l2.8,1.1C403.2,919.4,403,921.6,402.7,923.8z M403.8,913l-3.2-1.3l0-6.9l3.8,1.6C404.2,908.7,404,910.9,403.8,913z M404.8,902.3l-4.2-1.7v-6.9l4.8,1.9C405.2,897.8,405,900.1,404.8,902.3z M405.7,891.4l-5.1-2.1l0-6.9l5.6,2.3C406,887,405.9,889.2,405.7,891.4z M406.5,880.6l-5.9-2.4l0-6.9l6.4,2.6C406.8,876.1,406.6,878.4,406.5,880.6z M407.3,868.6c0,0.4,0,0.7-0.1,1.1l-6.6-2.7l0-6.9l7,2.8C407.5,864.9,407.4,866.8,407.3,868.6z M407.9,858.8l-7.3-2.9l0-3.5h7.6C408.1,854.5,408,856.6,407.9,858.8z M414.5,880.9c0.6-8.8,1.2-18.3,1.7-28.6h27v-7h-91v7h25c0.6,10,1.1,19.2,1.6,27.8c-66-5.6-127.2-33.9-174.6-81.2C151.2,745.9,122,675.3,122,600.3s29.2-145.6,82.3-198.6c43.1-43.1,97.6-70.4,156.8-79.2c0.1,7.9,0.3,16.8,0.5,26.4h-16.1v7h109.8v-7h-22.7c0.2-10.2,0.4-19.6,0.5-27.9c63.6,6.8,122.6,34.8,168.4,80.7c53.1,53.1,82.3,123.6,82.3,198.6s-29.2,145.6-82.3,198.6C551.2,849.2,485.2,878.1,414.5,880.9z"/>
+</svg>
+</div>
+<span>LEARN ENOUGH</span>
+</a><ul class='headerMenu'>
+<li><a href="/courses">Courses</a></li>
+<li>
+<a target="_blank" href="http://www.railstutorial.org">The Rails Tutorial</a>
+</li>
+<li><a href="/story">The LE Story</a></li>
+<li><a href="/login">Log In</a></li>
+<li><a href="/subscribe">Register</a></li>
+</ul>
+<div class='side-menu'>
+<div class=''>
+</div>
+<div class='le-side-buy'>
+<header class=''>
+<div class='articlePrice'>$9</div>
+<a class="articleBuy" href="/buy/164?option=ebooks">Buy eBook</a>
+</header>
+<div class='article-screencast-note'>Also available: over an hour of instructional screencasts that walk you step by step through the tutorial</div>
+<div class='articleMenu'>
+<div class='bookMenuActions j_downloadLinks'>
+<a onclick="$(&#39;#bookMenuEmail&#39;).toggleClass(&#39;open&#39;); return false" class="buttonStyle greyButton iEmailUpdate" href=""><i class='fas fa-heart'></i>
+Mailing List
+</a>
+<a href="/subscribe"><i class='fas fa-star'></i>
+All Access Subscription
+</a></div>
+<div class='bookMenu-email' id='bookMenuEmail'>
+Follow author to receive email updates about new content
+<div class='j_followBookForm'><div id='j_bookFollowForm'>
+<form action="https://www.softcover.io/books/164/follow" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+<!-- %input{name: "name", type: "text", placeholder: "YOUR NAME"} -->
+<input name='email' placeholder='Your email address' type='text'>
+<input class='greyButton optClick_follow' data-disable-with='Submitting...' type='submit' value='Follow Author'>
+</form>
+
+<p id='j_bookFollowNotice' style='display:none'></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<ul class=''>
+<li class='courseCh'>
+<a id="chapter-2696" href="/command-line-tutorial/frontmatter">Frontmatter
+</a><li class='courseCh'>
+<a id="chapter-2697" href="/command-line-tutorial/basics">1. Basics
+</a><ul class='courseSecWr'>
+<li class='courseSec'>
+<a id="chapter_section-835" class="j_courseSection" href="/command-line-tutorial/basics/introduction"><span class='courseSec-num'>1.1</span>
+Introduction
+</a></li>
+<li class='courseSec'>
+<a id="chapter_section-618" class="j_courseSection" href="/command-line-tutorial/basics/running_a_terminal"><span class='courseSec-num'>1.2</span>
+Running a terminal
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1681" href="/command-line-tutorial/basics/running_a_terminal#sec-exercises_terminal"><span class='courseSec-num'>1.2.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-619" class="j_courseSection" href="/command-line-tutorial/basics/our_first_command"><span class='courseSec-num'>1.3</span>
+Our first command
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1682" href="/command-line-tutorial/basics/our_first_command#sec-exercises_first_command"><span class='courseSec-num'>1.3.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-620" class="j_courseSection" href="/command-line-tutorial/basics/man_pages"><span class='courseSec-num'>1.4</span>
+Man pages
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1683" href="/command-line-tutorial/basics/man_pages#sec-exercises_man"><span class='courseSec-num'>1.4.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-621" class="j_courseSection" href="/command-line-tutorial/basics/editing_the_line"><span class='courseSec-num'>1.5</span>
+Editing the line
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1684" href="/command-line-tutorial/basics/editing_the_line#sec-exercises_editing_the_line"><span class='courseSec-num'>1.5.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-622" class="j_courseSection" href="/command-line-tutorial/basics/cleaning_up"><span class='courseSec-num'>1.6</span>
+Cleaning up
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1685" href="/command-line-tutorial/basics/cleaning_up#sec-exercises_cleaning"><span class='courseSec-num'>1.6.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-623" class="j_courseSection" href="/command-line-tutorial/basics/summary_cleaning"><span class='courseSec-num'>1.7</span>
+Summary
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1686" href="/command-line-tutorial/basics/summary_cleaning#sec-exercises_summary_basics"><span class='courseSec-num'>1.7.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='courseCh'>
+<a id="chapter-2698" href="/command-line-tutorial/manipulating_files">2. Manipulating files
+</a><ul class='courseSecWr'>
+<li class='courseSec'>
+<a id="chapter_section-624" class="j_courseSection" href="/command-line-tutorial/manipulating_files/redirecting_and_appending"><span class='courseSec-num'>2.1</span>
+Redirecting and appending
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1687" href="/command-line-tutorial/manipulating_files/redirecting_and_appending#sec-exercises_redirecting_appending"><span class='courseSec-num'>2.1.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-625" class="j_courseSection" href="/command-line-tutorial/manipulating_files/listing"><span class='courseSec-num'>2.2</span>
+Listing
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1688" href="/command-line-tutorial/manipulating_files/listing#sec-hidden_files"><span class='courseSec-num'>2.2.1</span>
+Hidden files
+</a></li>
+<li>
+<a id="sub_section-1689" href="/command-line-tutorial/manipulating_files/listing#sec-exercises_listing"><span class='courseSec-num'>2.2.2</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-626" class="j_courseSection" href="/command-line-tutorial/manipulating_files/renaming_copying_deleting"><span class='courseSec-num'>2.3</span>
+Renaming, copying, deleting
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1690" href="/command-line-tutorial/manipulating_files/renaming_copying_deleting#sec-unix_terseness"><span class='courseSec-num'>2.3.1</span>
+Unix terseness
+</a></li>
+<li>
+<a id="sub_section-1691" href="/command-line-tutorial/manipulating_files/renaming_copying_deleting#sec-exercises_manipulating"><span class='courseSec-num'>2.3.2</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-627" class="j_courseSection" href="/command-line-tutorial/manipulating_files/summary_manipulating"><span class='courseSec-num'>2.4</span>
+Summary
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1692" href="/command-line-tutorial/manipulating_files/summary_manipulating#sec-exercises_summary_manipulating"><span class='courseSec-num'>2.4.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='courseCh'>
+<a id="chapter-2699" href="/command-line-tutorial/inspecting_files">3. Inspecting files
+</a><ul class='courseSecWr'>
+<li class='courseSec'>
+<a id="chapter_section-628" class="j_courseSection" href="/command-line-tutorial/inspecting_files/downloading_a_file"><span class='courseSec-num'>3.1</span>
+Downloading a file
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1693" href="/command-line-tutorial/inspecting_files/downloading_a_file#sec-exercises_downloading"><span class='courseSec-num'>3.1.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-629" class="j_courseSection" href="/command-line-tutorial/inspecting_files/making_heads_and_tails"><span class='courseSec-num'>3.2</span>
+Making heads and tails of it
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1694" href="/command-line-tutorial/inspecting_files/making_heads_and_tails#sec-wordcount_and_pipes"><span class='courseSec-num'>3.2.1</span>
+Wordcount and pipes
+</a></li>
+<li>
+<a id="sub_section-1695" href="/command-line-tutorial/inspecting_files/making_heads_and_tails#sec-exercises_head_tails"><span class='courseSec-num'>3.2.2</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-630" class="j_courseSection" href="/command-line-tutorial/inspecting_files/less_is_more"><span class='courseSec-num'>3.3</span>
+Less is more
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1696" href="/command-line-tutorial/inspecting_files/less_is_more#sec-exercises_summary_less"><span class='courseSec-num'>3.3.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-631" class="j_courseSection" href="/command-line-tutorial/inspecting_files/grepping"><span class='courseSec-num'>3.4</span>
+Grepping
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1697" href="/command-line-tutorial/inspecting_files/grepping#sec-exercises_grep"><span class='courseSec-num'>3.4.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-632" class="j_courseSection" href="/command-line-tutorial/inspecting_files/summary_inspecting"><span class='courseSec-num'>3.5</span>
+Summary
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1698" href="/command-line-tutorial/inspecting_files/summary_inspecting#sec-exercises_inspecting"><span class='courseSec-num'>3.5.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='courseCh'>
+<a id="chapter-2700" href="/command-line-tutorial/directories">4. Directories
+</a><ul class='courseSecWr'>
+<li class='courseSec'>
+<a id="chapter_section-633" class="j_courseSection" href="/command-line-tutorial/directories/structure"><span class='courseSec-num'>4.1</span>
+Directory structure
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1699" href="/command-line-tutorial/directories/structure#sec-exercises_structure"><span class='courseSec-num'>4.1.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-634" class="j_courseSection" href="/command-line-tutorial/directories/making_directories"><span class='courseSec-num'>4.2</span>
+Making directories
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1700" href="/command-line-tutorial/directories/making_directories#sec-exercises_making_dirctories"><span class='courseSec-num'>4.2.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-635" class="j_courseSection" href="/command-line-tutorial/directories/navigating_directories"><span class='courseSec-num'>4.3</span>
+Navigating directories
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1701" href="/command-line-tutorial/directories/navigating_directories#sec-exercises_navigating_directories"><span class='courseSec-num'>4.3.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-636" class="j_courseSection" href="/command-line-tutorial/directories/removing_directories"><span class='courseSec-num'>4.4</span>
+Renaming, copying, and deleting directories
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1702" href="/command-line-tutorial/directories/removing_directories#sec-grep_redux"><span class='courseSec-num'>4.4.1</span>
+Grep redux
+</a></li>
+<li>
+<a id="sub_section-1703" href="/command-line-tutorial/directories/removing_directories#sec-exercises_mv_cp_rmdir"><span class='courseSec-num'>4.4.2</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-637" class="j_courseSection" href="/command-line-tutorial/directories/summary_directories"><span class='courseSec-num'>4.5</span>
+Summary
+</a><ul class='courseSub'>
+<li>
+<a id="sub_section-1704" href="/command-line-tutorial/directories/summary_directories#sec-exercises_summary_directories"><span class='courseSec-num'>4.5.1</span>
+Exercises
+</a></li>
+</ul>
+</li>
+<li class='courseSec'>
+<a id="chapter_section-836" class="j_courseSection" href="/command-line-tutorial/directories/conclusion"><span class='courseSec-num'>4.6</span>
+Conclusion
+</a></li>
+</ul>
+</li>
+<br>
+<p>
+<a href="/command-line-tutorial?single_page=1">Single Page View</a>
+</p>
+</ul>
+</div>
+
+</nav>
+<div id='dropBG'></div>
+</div>
+
+<div class='le-content'>
+<div class='header-push'>
+<div class='header-push-close' id='header-push-toggle'>
+<a class="push-close" href="javascript://"><i class='fas fa-times'></i>
+</a><a class="push-open" href="javascript://"><i class='fas fa-caret-square-down'></i>
+</a></div>
+<div class='header-push-content'>
+<h1>The Learn Enough Society</h1>
+<div class='header-push-copy'>
+<div>
+<div class='svg svg-shield header-push-logo'><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 801 1041" style="enable-background:new 0 0 801 1041;" xml:space="preserve">
+<path class="st0" d="M383.4,845.3c-147.5-10.8-263.9-133.9-263.9-284.1c0-144,106.9-263.1,245.7-282.2"/>
+<path class="st0" d="M432.2,277.6c144.3,14,257.1,135.6,257.1,283.5c0,154.2-122.6,279.8-275.6,284.7"/>
+<path class="st1" d="M365.8,313.3c-0.8-42.1-1.2-70.2-1.3-75.5l0-0.9l0.8-0.3c3.1-1.1,6.2-4,9.3-8.7h-11c-3.5-0.3-14.6-0.2-19.8,5.4c-2,2.2-2.9,5-3,8.8l-0.1,14.6l-15.7-0.1l0.1-14.6c0-8.8,2.8-16.3,7.9-21.8c10.7-11.5,31.5-10.4,31.5-10.4h17.1c-1.2-11.7-3.7-39.8-3.6-74.5c0.1-30.4,5-61,6.7-70.8 M415.2,809.5c-4.1,73.2-9,127.9-14.7,141.9c-0.5,1.2-0.9,2-1.4,2.6l-1,1.2l-1-1.2c-6.2-7.8-11.5-65.2-15.8-144.3 M413.6,64.6c1.6,9.8,6.3,40.4,6.2,70.8c-0.1,34.7-2.8,62.7-4.1,74.4h18c0,0,14.9-0.2,19.8-5.4c2-2.2,2.9-5,3-8.8l0.1-14.6l15.7,0.1l-0.1,14.6c0,8.8-2.8,16.3-7.9,21.8c-10.7,11.5-28,10.7-31.5,10.5h-10.1c2.3,3.7,5.5,7.6,9.2,9l0.8,0.3l0,0.9c-0.1,5.3-0.5,33.2-1.4,75.2"/>
+<line class="st2" x1="408.4" y1="27.3" x2="423.5" y2="33.4"/>
+<line class="st2" x1="411.2" y1="39.6" x2="423.1" y2="44.5"/>
+<line class="st2" x1="409.4" y1="50.1" x2="420.4" y2="54.5"/>
+<line class="st2" x1="403.4" y1="58.8" x2="414.9" y2="63.5"/>
+<line class="st2" x1="398.2" y1="79.1" x2="418.7" y2="87.4"/>
+<line class="st2" x1="399.5" y1="90.8" x2="418" y2="98.3"/>
+<line class="st2" x1="396.7" y1="100.9" x2="419.6" y2="110.1"/>
+<line class="st2" x1="400.8" y1="113.7" x2="419.6" y2="121.3"/>
+<line class="st2" x1="402.1" y1="125.4" x2="419.4" y2="132.4"/>
+<line class="st2" x1="400" y1="135.7" x2="420.4" y2="144"/>
+<line class="st2" x1="400.5" y1="147.1" x2="419.5" y2="154.8"/>
+<line class="st2" x1="402.1" y1="159" x2="419.1" y2="165.8"/>
+<line class="st2" x1="402.1" y1="170.1" x2="418.7" y2="176.9"/>
+<line class="st2" x1="397.2" y1="179.3" x2="418.1" y2="187.8"/>
+<line class="st2" x1="399.5" y1="191.4" x2="416.3" y2="198.3"/>
+<line class="st2" x1="398.7" y1="202.3" x2="416.4" y2="209.5"/>
+<line class="st2" x1="415.3" y1="231.4" x2="432.6" y2="238.4"/>
+<line class="st2" x1="414" y1="242.1" x2="432.4" y2="249.6"/>
+<line class="st2" x1="413.1" y1="252.9" x2="432.2" y2="260.7"/>
+<line class="st2" x1="411.9" y1="263.6" x2="432" y2="271.8"/>
+<line class="st2" x1="410.8" y1="274.3" x2="432.5" y2="283.2"/>
+<line class="st2" x1="409.7" y1="285.1" x2="432" y2="294.1"/>
+<line class="st2" x1="408.5" y1="295.8" x2="431.4" y2="305.1"/>
+<line class="st2" x1="407.4" y1="306.5" x2="422.9" y2="312.8"/>
+<line class="st2" x1="397.3" y1="816.9" x2="414.4" y2="823.8"/>
+<line class="st2" x1="397.9" y1="828.3" x2="413.7" y2="834.8"/>
+<line class="st2" x1="398.2" y1="839.7" x2="412.8" y2="845.6"/>
+<line class="st2" x1="398.2" y1="850.9" x2="412.2" y2="856.5"/>
+<line class="st2" x1="397.9" y1="861.9" x2="411.4" y2="867.4"/>
+<line class="st2" x1="397.8" y1="873.1" x2="410.6" y2="878.2"/>
+<line class="st2" x1="398.1" y1="884.4" x2="409.7" y2="889.1"/>
+<line class="st2" x1="397.5" y1="895.3" x2="408.7" y2="899.8"/>
+<line class="st2" x1="397.8" y1="906.6" x2="407.6" y2="910.6"/>
+<line class="st2" x1="398.2" y1="918" x2="406.3" y2="921.3"/>
+<line class="st2" x1="389.9" y1="313.3" x2="381.6" y2="228.5"/>
+<line class="st2" x1="415.6" y1="228.7" x2="406.7" y2="313.4"/>
+<line class="st2" x1="398.1" y1="809.7" x2="398.1" y2="953.2"/>
+<line class="st1" x1="374.5" y1="227.9" x2="422.2" y2="227.9"/>
+<line class="st1" x1="374.5" y1="209.8" x2="422.2" y2="209.8"/>
+<ellipse class="st1" cx="399.2" cy="40.1" rx="25.1" ry="28.7"/>
+<line class="st3" x1="456.8" y1="313.3" x2="346.9" y2="313.3"/>
+<line class="st3" x1="353.7" y1="809.7" x2="444.7" y2="809.7"/>
+<path class="st3" d="M316.5,686.9h59.7l24.3,25.7 M269.1,752.9l-26-24.3V370h49.7l24.3,25.7"/>
+<path class="st3" d="M438.6,753.6l-26.6-25V370h135.1l24.3,25.6 M485.5,686.9h61.6l24.3,25.9 M485.5,524h56.6l24.3,25.7"/>
+<path class="st3" d="M267.4,752.9V394.3h49.7v316.9h83.4v41.7H267.4z"/>
+<path class="st3" d="M436.3,752.9V394.3h135.1V436h-85.4v112.3h80.5V590h-80.5v121.2h85.4v41.7H436.3z"/>
+<line class="st3" x1="243.1" y1="370" x2="267.4" y2="394.3"/>
+<line class="st3" x1="412" y1="370" x2="436.3" y2="394.3"/>
+<path class="st0" d="M380.8,157.7h-367v447.6c0,98.6,16.3,170.2,69.6,231.3c61.3,70.4,202.3,139.4,275.1,166.8c24.2,9.1,39.4,22.1,39.4,22.1s15.2-13,39.4-22.1C510,976.1,650.9,907,712.3,836.6c53.3-61.1,69.6-132.7,69.6-231.3V157.7H420.2"/>
+<line class="st0" x1="552.4" y1="293.3" x2="688.1" y2="157.7"/>
+<line class="st0" x1="52.6" y1="793.2" x2="138.1" y2="707.7"/>
+<line class="st0" x1="226.5" y1="808.7" x2="144.7" y2="890.5"/>
+<line class="st0" x1="781.1" y1="254.2" x2="652.5" y2="382.8"/>
+</svg>
+</div>
+</div>
+<div>
+<h5>Learn to Tech</h5>
+<p>Learning to be technically sophisticated is the most important skill of the 21st century. We hope to reach and inspire as many people as possible — and we want you to be a part of it.</p>
+<p>
+<a href="/story"><button class='btn-small attention'>THE LEARN ENOUGH STORY</button>
+</a></p>
+</div>
+<div>
+<h5>Get access to all tutorials and screencasts</h5>
+<p>Learn Enough Society members get access to all the published tutorials, all screencasts, and immediate access to new tutorials (including the full Rails 5 edition of the Rails Tutorial).</p>
+<p>
+<a href="/subscriptions/new"><button class='btn-small attention'>JOIN THE SOCIETY NOW</button>
+</a></p>
+</div>
+</div>
+</div>
+<div class='header-push-content-closed'>
+<a href="/subscriptions/new">Join the Learn Enough Society</a>
+&nbsp;today to get access to all tutorials and screencasts (including the Rails 5 edition of the Rails Tutorial)
+</div>
+</div>
+
+<div class='mainWr'>
+<div class='j_sectionContent' data-html='&lt;div id="sec-our_first_command" data-tralics-id="cid4" class="section" data-number="1.3"&gt;&#x000A;&lt;h2&gt;&lt;a href="basics_fragment.html#sec-our_first_command" class="heading hyperref"&gt;&lt;span class="number"&gt;1.3 &lt;/span&gt;Our first command&lt;/a&gt;&lt;/h2&gt;&#x000A;&lt;p&gt;We are now prepared to run our first command, which prints the word “hello” to the screen.&lt;span class="intersentencespace"&gt;&lt;/span&gt; (The place where characters get printed is known as “standard out”, which is usually just the screen, and rarely refers to a physical printer.)&lt;span class="intersentencespace"&gt;&lt;/span&gt; The command is &lt;code&gt;echo&lt;/code&gt;, and the argument is the string of characters—or simply &lt;em&gt;string&lt;/em&gt; for short—that we want to print.&lt;span class="intersentencespace"&gt;&lt;/span&gt; To run the &lt;code&gt;echo&lt;/code&gt; command, type “echo hello” at the prompt, and then press the Return key (also called Enter):&lt;/p&gt;&#x000A;&lt;div class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; hello&#x000A;&lt;span class="go"&gt;hello&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;$&lt;/span&gt;&#x000A;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#x000A;&lt;p&gt;(I recommend always typing the commands out yourself, which will let you learn more than if you rely on copying and pasting.)&lt;span class="intersentencespace"&gt;&lt;/span&gt; Here we see that &lt;code&gt;echo hello&lt;/code&gt; prints “hello” and then returns another prompt.&lt;span class="intersentencespace"&gt;&lt;/span&gt; Note that, for brevity, I’ve omitted all characters in the prompt except the dollar sign &lt;code&gt;$&lt;/code&gt;.&lt;/p&gt;&#x000A;&lt;p&gt;Just to make the pattern clear, let’s try a second &lt;code&gt;echo&lt;/code&gt; command:&lt;/p&gt;&#x000A;&lt;div class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"goodbye"&lt;/span&gt;&#x000A;&lt;span class="go"&gt;goodbye&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&#x0027;goodbye&#x0027;&lt;/span&gt;&#x000A;&lt;span class="go"&gt;goodbye&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;$&lt;/span&gt;&#x000A;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#x000A;&lt;p&gt;Note here that we’ve wrapped “goodbye” in quotation marks—and we also see that we can use either double quotes, as in &lt;code&gt;"goodbye"&lt;/code&gt;, or single quotes, as in &lt;code&gt;&#x0027;goodbye&#x0027;&lt;/code&gt;.&lt;span class="intersentencespace"&gt;&lt;/span&gt; Such quotes can be used to group strings visually, though in many contexts they are not required by &lt;code&gt;echo&lt;/code&gt; (&lt;a href="basics_fragment.html#code-hello_goodbye" class="hyperref"&gt;Listing &lt;span class="ref"&gt;1.1&lt;/span&gt;&lt;/a&gt;).&lt;sup id="cha-1_footnote-ref-6" class="footnote"&gt;&lt;a href="#cha-1_footnote-6"&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#x000A;&lt;div class="codelisting" id="code-hello_goodbye" data-tralics-id="uid25" data-number="1.1"&gt;&#x000A;&lt;div class="heading"&gt;&#x000A;&lt;span class="number"&gt;Listing 1.1:&lt;/span&gt; &#x000A;&#x000A;&lt;span class="description"&gt;Printing “hello, goodbye” two different ways.&lt;/span&gt;&#x000A;&lt;/div&gt;&#x000A;&#x000A;&lt;div class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; hello, goodbye&#x000A;&lt;span class="go"&gt;hello, goodbye&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"hello, goodbye"&lt;/span&gt;&#x000A;&lt;span class="go"&gt;hello, goodbye&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;$&lt;/span&gt;&#x000A;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#x000A;&lt;/div&gt;&#x000A;&lt;p&gt;One thing that can happen when using quotes is accidentally not matching them, as follows:&lt;/p&gt;&#x000A;&lt;div class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"hello, goodbye&lt;/span&gt;&#x000A;&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&lt;span class="s2"&gt;&lt;/span&gt;&#x000A;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#x000A;&lt;p&gt;At this point, it seems we’re stuck.&lt;span class="intersentencespace"&gt;&lt;/span&gt; There are specific ways out of this quandary (in fact, in this case you can just add a closing quote and hit return), but it’s good to have a general strategy for getting out of trouble (&lt;a href="basics_fragment.html#fig-cat_in_box" class="hyperref"&gt;Figure &lt;span class="ref"&gt;1.9&lt;/span&gt;&lt;/a&gt;).&lt;sup id="cha-1_footnote-ref-7" class="footnote"&gt;&lt;a href="#cha-1_footnote-7"&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;span class="intersentencespace"&gt;&lt;/span&gt; This strategy is called “Ctrl-C” (&lt;a href="basics_fragment.html#aside-getting_out_of_trouble" class="hyperref"&gt;Box &lt;span class="ref"&gt;1.4&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;&#x000A;&lt;div class="center figure" id="fig-cat_in_box" data-tralics-id="uid27" data-number="1.9"&gt;&#x000A;&lt;div class="graphics image"&gt;&lt;img src="images/figures/cat_in_box.png" alt="images/figures/cat_in_box"&gt;&lt;/div&gt;&#x000A;&lt;div class="caption"&gt;&#x000A;&lt;span class="header"&gt;Figure 1.9: &lt;/span&gt;&lt;span class="description"&gt;This cat appears to be stuck and should probably hit &lt;code&gt;Ctrl-C&lt;/code&gt;.&#x000A;&lt;/span&gt;&#x000A;&lt;/div&gt;&#x000A;&lt;/div&gt;&#x000A;&lt;div class="aside" id="aside-getting_out_of_trouble" data-tralics-id="uid28" data-number="1.4"&gt;&#x000A;&lt;div class="heading"&gt;&#x000A;&lt;span class="number"&gt;Box 1.4.&lt;/span&gt; &#x000A;&#x000A;&lt;span class="description"&gt;Getting out of trouble&lt;/span&gt;&#x000A;&lt;/div&gt;&#x000A;&lt;p&gt;When using the command line, there are lots of things that can get you in trouble, by which I mean the terminal will just hang or otherwise end up in a state that makes entering further commands difficult or impossible.&lt;span class="intersentencespace"&gt;&lt;/span&gt; Here are some examples of such commands:&lt;/p&gt;&#x000A;&lt;pre&gt; $ echo "hello&lt;/pre&gt;&#x000A;&lt;pre&gt; $ grep foobar&lt;/pre&gt;&#x000A;&lt;pre&gt; $ yes&lt;/pre&gt;&#x000A;&lt;pre&gt; $ tail&lt;/pre&gt;&#x000A;&lt;pre&gt; $ cat&lt;/pre&gt;&#x000A;&lt;p&gt;In every case, the solution is the same: hit &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt; (pronounced “control-see”).&lt;span class="intersentencespace"&gt;&lt;/span&gt; Here &lt;code class="tt"&gt;Ctrl&lt;/code&gt; refers to the “control” key on your keyboard, and &lt;code class="tt"&gt;C&lt;/code&gt; refers to the key labeled “C”.&lt;span class="intersentencespace"&gt;&lt;/span&gt; &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt; thus means “While holding down the control key, press C.”&lt;span class="intersentencespace"&gt;&lt;/span&gt; In particular, &lt;code class="tt"&gt;C&lt;/code&gt; does &lt;em&gt;not&lt;/em&gt; refer to the capital letter C, so you should not press Shift in addition to Ctrl.&lt;span class="intersentencespace"&gt;&lt;/span&gt; (&lt;code class="tt"&gt;Ctrl-C&lt;/code&gt; sends a &lt;em&gt;control code&lt;/em&gt; to the terminal and has nothing to do with producing a capital C when typing normal text.)&lt;span class="intersentencespace"&gt;&lt;/span&gt; The result of typing &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt; is sometimes written as &lt;code class="tt"&gt;⌃C&lt;/code&gt;, like this:&lt;/p&gt;&#x000A;&lt;pre&gt; $ tail&#x000A; ^C&lt;/pre&gt;&#x000A;&lt;p&gt;The &lt;a href="https://en.wikipedia.org/wiki/Control-C" target="_blank" rel="noopener"&gt;origins of &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt;&lt;/a&gt; are somewhat obscure, but as a mnemonic I like to think of it as meaning “cancel”.&lt;span class="intersentencespace"&gt;&lt;/span&gt; However you remember it, &lt;em&gt;do&lt;/em&gt; remember it: when you get into trouble at the command line, your best bet is usually to hit &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt;.&lt;/p&gt;&#x000A;&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: When &lt;code class="tt"&gt;Ctrl-C&lt;/code&gt; fails, 90% of the time hitting &lt;code class="tt"&gt;ESC&lt;/code&gt; (escape) will do the trick.&lt;span class="intersentencespace"&gt;&lt;/span&gt;&lt;/p&gt;&#x000A;&#x000A;&lt;/div&gt;&#x000A;&lt;/div&gt;'></div>
+<div class='j_sectionContent combined-sub-section' data-html='&lt;div id="sec-exercises_first_command" data-tralics-id="uid29" class="subsection" data-number="1.3.1"&gt;&#x000A;&lt;h3&gt;&lt;a href="basics_fragment.html#sec-exercises_first_command" class="heading hyperref"&gt;&lt;span class="number"&gt;1.3.1 &lt;/span&gt;Exercises&lt;/a&gt;&lt;/h3&gt;&#x000A;&lt;p&gt; &lt;/p&gt;&#x000A;&lt;div class="society-note"&gt;&#x000A;&lt;p&gt;Solutions to exercises are available for free at &lt;a href="http://www.learnenough.com/solutions" target="_blank" rel="noopener"&gt;learnenough.com/solutions&lt;/a&gt; with any Learn Enough purchase.&lt;span class="intersentencespace"&gt;&lt;/span&gt; To see other people’s answers and to record your own, join the &lt;a href="http://learnenough.com/society" target="_blank" rel="noopener"&gt;Learn Enough Society&lt;/a&gt; at &lt;a href="http://learnenough.com/society" target="_blank" rel="noopener"&gt;learnenough.com/society&lt;/a&gt;.&lt;span class="intersentencespace"&gt;&lt;/span&gt;  &lt;/p&gt;&#x000A;&lt;/div&gt;&#x000A;&lt;ol&gt;&#x000A;&lt;li&gt;Write a command that prints out the string “hello, world”.&lt;span class="intersentencespace"&gt;&lt;/span&gt; &lt;em&gt;Extra credit&lt;/em&gt;: As in &lt;a href="basics_fragment.html#code-hello_goodbye" class="hyperref"&gt;Listing &lt;span class="ref"&gt;1.1&lt;/span&gt;&lt;/a&gt;, do it two different ways, both with and without using quotation marks. &lt;span class="exercise" id="ex-hello-world"&gt;&lt;/span&gt;&#x000A;&lt;/li&gt;&#x000A;&lt;li&gt;Type the command &lt;code&gt;echo &#x0027;hello&lt;/code&gt; (with a mismatched single quote), and then get out of trouble using the technique from &lt;a href="basics_fragment.html#aside-getting_out_of_trouble" class="hyperref"&gt;Box &lt;span class="ref"&gt;1.4&lt;/span&gt;&lt;/a&gt;. &lt;span class="exercise" id="ex-echo-hello"&gt;&lt;/span&gt;&#x000A;&lt;/li&gt;&#x000A;&lt;/ol&gt;&#x000A;&lt;/div&gt;' data-sub-section-id='1682'></div>
+<div class='courseNextBtn'>
+<a class="btn btnSmall" href="?next=true">NEXT: 1.4 Man pages</a>
+</div>
+</div>
+<div id='exerciseAnswerTmpl' style='display:none'>
+<div class='j_exercise-answer'>
+<form action='/' class='j_exercise-answer-form' data-exercise-id='${exercise_id}' method='post'>
+<textarea name='text' rows='10'>${answer_text}</textarea>
+<div class='exercise-answer-edit'>
+<div class='exercise-answer-edit-controls'>
+<label class='fancyCheckLabel'>
+Share with other members
+{{if make_public}}
+<input checked id='make_public' name='make_public' type='checkbox'>
+{{else}}
+<input id='make_public' name='make_public' type='checkbox'>
+{{/if}}
+<label></label>
+</label>
+<a class='j_cancel' href='javascript:void(0)'>
+<button class='btn-small danger'>Cancel</button>
+</a>
+<input class='btn-small' type='submit' value='save'>
+</div>
+<div class='exercise-answer-edit-help'>
+Formatting:
+<a target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">Basic Help</a>
+<a target="_blank" href="https://help.github.com/articles/creating-and-highlighting-code-blocks/">Advanced</a>
+</div>
+</div>
+</form>
+<div class='j_exercise-answer-text'>
+<h5>Your Answer</h5>
+<div class='exercise-answer'>{{html answer_html}}</div>
+<div class='exercise-answer-actions'>
+{{if make_public}}
+<span>PUBLIC</span>
+{{/if}}
+<a class='j_edit' href='javascript://'>
+<i class='fas fa-edit'></i>
+Edit Answer
+</a>
+<a href='/exercise_answers/${token}'>
+<i class='fas fa-link'></i>
+Link
+</a>
+</div>
+</div>
+<div class='exercise-answer-bar'>
+<a class='exercise-answer-all' href='/exercise_answers?book_id=164&amp;label=${exercise_id}' id='j_answer_public' style='display:{{if public_count == 0}}none{{/if}}'>
+<i class='fas fa-users'></i>
+View all &nbsp;(
+<span id='j_answer_public_count'>${ public_count }</span>
+)
+</a>
+<a class='j_exercise-answer-btn exercise-answer-add' href='javascript://'>
+<i class='fas fa-plus'></i>
+Add Answer
+</a>
+</div>
+</div>
+</div>
+<script>
+  $(function(){
+    Book.init({
+      title: "Learn Enough Command Line to Be Dangerous",
+      path: "",
+      slug: "command-line-tutorial",
+      isCourse: true,
+      singlePage: false,
+      splitReadingSections: true,
+      hasSubscription: false,
+      book_id: 164,
+      location: {id:619, type: "ChapterSection", path: "/command-line-tutorial/basics/our_first_command"},
+      all_exercise_answer_view: false,
+      chapter_id: 2697,
+      labelLookup: {"sec-introduction":"basics/introduction","fig-command_line_command":"basics/introduction","cha-1_footnote-ref-2":"basics/introduction","cha-1_footnote-ref-3":"basics/introduction","aside-virtual_machine":"basics/introduction","fig-virtual_machine":"basics/introduction","sec-exercises_terminal":"basics/running_a_terminal/exercises_terminal","ex-terminal_tabs":"basics/running_a_terminal/exercises_terminal","cha-1_footnote-ref-5":"basics/running_a_terminal/exercises_terminal","ex-new_tab":"basics/running_a_terminal/exercises_terminal","fig-command_exercise":"basics/running_a_terminal/exercises_terminal","fig-terminal_tabs":"basics/running_a_terminal/exercises_terminal","fig-terminal_menu":"basics/running_a_terminal/exercises_terminal","sec-running_a_terminal":"basics/running_a_terminal","fig-terminal_window":"basics/running_a_terminal","cha-1_footnote-ref-4":"basics/running_a_terminal","fig-anatomy":"basics/running_a_terminal","aside-prompt":"basics/running_a_terminal","sec-exercises_first_command":"basics/our_first_command/exercises_first_command","ex-hello-world":"basics/our_first_command/exercises_first_command","ex-echo-hello":"basics/our_first_command/exercises_first_command","sec-our_first_command":"basics/our_first_command","cha-1_footnote-ref-6":"basics/our_first_command","code-hello_goodbye":"basics/our_first_command","cha-1_footnote-ref-7":"basics/our_first_command","fig-cat_in_box":"basics/our_first_command","aside-getting_out_of_trouble":"basics/our_first_command","sec-exercises_man":"basics/man_pages/exercises_man","ex-man-echo":"basics/man_pages/exercises_man","ex-man-echo-hello":"basics/man_pages/exercises_man","code-with_newline":"basics/man_pages/exercises_man","code-without_newline":"basics/man_pages/exercises_man","sec-man_pages":"basics/man_pages","cha-1_footnote-ref-8":"basics/man_pages","code-man_echo":"basics/man_pages","fig-man_to_man":"basics/man_pages","cha-1_footnote-ref-9":"basics/man_pages","code-man_man":"basics/man_pages","cha-1_footnote-ref-10":"basics/man_pages","aside-technical_sophistication":"basics/man_pages","fig-tech_support_cheat_sheet":"basics/man_pages","sec-exercises_editing_the_line":"basics/editing_the_line/exercises_editing_the_line","ex-up-arrow":"basics/editing_the_line/exercises_editing_the_line","ex-archaic":"basics/editing_the_line/exercises_editing_the_line","sec-editing_the_line":"basics/editing_the_line","table-keyboard_symbols":"basics/editing_the_line","cha-1_footnote-ref-11":"basics/editing_the_line","code-sonnet_1":"basics/editing_the_line","cha-1_footnote-ref-12":"basics/editing_the_line","cha-1_footnote-ref-13":"basics/editing_the_line","fig-sonnet_1":"basics/editing_the_line","code-sonnet_1_edited":"basics/editing_the_line","sec-exercises_cleaning":"basics/cleaning_up/exercises_cleaning","ex-clear-contents":"basics/cleaning_up/exercises_cleaning","ex-new-tab":"basics/cleaning_up/exercises_cleaning","sec-cleaning_up":"basics/cleaning_up","sec-exercises_summary_basics":"basics/summary_cleaning/exercises_summary_basics","ex-command-man":"basics/summary_cleaning/exercises_summary_basics","ex-man-sleep":"basics/summary_cleaning/exercises_summary_basics","ex-out-of-trouble":"basics/summary_cleaning/exercises_summary_basics","sec-summary_cleaning":"basics/summary_cleaning","table-man_echo":"basics/summary_cleaning","":"directories","cha-basics":"basics","aside-computer_magic":"basics","cha-1_footnote-ref-1":"basics","fig-dev_desktop":"basics","cha-1_footnotes":"basics","cha-1_footnote-1":"basics","cha-1_footnote-2":"basics","cha-1_footnote-3":"basics","cha-1_footnote-4":"basics","cha-1_footnote-5":"basics","cha-1_footnote-6":"basics","cha-1_footnote-7":"basics","cha-1_footnote-8":"basics","cha-1_footnote-9":"basics","cha-1_footnote-10":"basics","cha-1_footnote-11":"basics","cha-1_footnote-12":"basics","cha-1_footnote-13":"basics","sec-exercises_redirecting_appending":"manipulating_files/redirecting_and_appending/exercises_redirecting_appending","ex-echo-redirect":"manipulating_files/redirecting_and_appending/exercises_redirecting_appending","ex-echo-redirect-append":"manipulating_files/redirecting_and_appending/exercises_redirecting_appending","ex-echo-redirect-reverse":"manipulating_files/redirecting_and_appending/exercises_redirecting_appending","sec-redirecting_and_appending":"manipulating_files/redirecting_and_appending","cha-2_footnote-ref-1":"manipulating_files/redirecting_and_appending","fig-cat":"manipulating_files/redirecting_and_appending","cha-2_footnote-ref-2":"manipulating_files/redirecting_and_appending","sec-hidden_files":"manipulating_files/listing/hidden_files","sec-exercises_listing":"manipulating_files/listing/exercises_listing","ex-command-list-all-prefix":"manipulating_files/listing/exercises_listing","ex-command-list-all-contains":"manipulating_files/listing/exercises_listing","ex-command-list-all-reverse-mod":"manipulating_files/listing/exercises_listing","sec-listing":"manipulating_files/listing","code-ls":"manipulating_files/listing","fig-file_listing":"manipulating_files/listing","code-ls_no_such":"manipulating_files/listing","aside-foo_bar":"manipulating_files/listing","cha-2_footnote-ref-3":"manipulating_files/listing","sec-unix_terseness":"manipulating_files/renaming_copying_deleting/unix_terseness","fig-y_u_no":"manipulating_files/renaming_copying_deleting/unix_terseness","sec-exercises_manipulating":"manipulating_files/renaming_copying_deleting/exercises_manipulating","ex-echo-redirect-cp":"manipulating_files/renaming_copying_deleting/exercises_manipulating","ex-cat-redirect-cp":"manipulating_files/renaming_copying_deleting/exercises_manipulating","ex-cat-combine":"manipulating_files/renaming_copying_deleting/exercises_manipulating","ex-rm-f":"manipulating_files/renaming_copying_deleting/exercises_manipulating","sec-renaming_copying_deleting":"manipulating_files/renaming_copying_deleting","aside-tab_completion":"manipulating_files/renaming_copying_deleting","sec-exercises_summary_manipulating":"manipulating_files/summary_manipulating/exercises_summary_manipulating","fig-copy_paste_sonnet_1":"manipulating_files/summary_manipulating/exercises_summary_manipulating","ex-copy-paste-to-file":"manipulating_files/summary_manipulating/exercises_summary_manipulating","ex-create-rename-copy":"manipulating_files/summary_manipulating/exercises_summary_manipulating","ex-list-wildcard":"manipulating_files/summary_manipulating/exercises_summary_manipulating","ex-rm-wildcard":"manipulating_files/summary_manipulating/exercises_summary_manipulating","sec-summary_manipulating":"manipulating_files/summary_manipulating","table-manipulating_files":"manipulating_files/summary_manipulating","cha-manipulating_files":"manipulating_files","aside-speak_geek":"manipulating_files","fig-bug_feature":"manipulating_files","cha-2_footnotes":"manipulating_files","cha-2_footnote-1":"manipulating_files","cha-2_footnote-2":"manipulating_files","cha-2_footnote-3":"manipulating_files","sec-exercises_downloading":"inspecting_files/downloading_a_file/exercises_downloading","ex-curl-i":"inspecting_files/downloading_a_file/exercises_downloading","ex-ls-long-form":"inspecting_files/downloading_a_file/exercises_downloading","ex-ls-human":"inspecting_files/downloading_a_file/exercises_downloading","cha-3_footnote-ref-4":"inspecting_files/downloading_a_file/exercises_downloading","ex-ls-hartl":"inspecting_files/downloading_a_file/exercises_downloading","sec-downloading_a_file":"inspecting_files/downloading_a_file","cha-3_footnote-ref-1":"inspecting_files/downloading_a_file","cha-3_footnote-ref-2":"inspecting_files/downloading_a_file","cha-3_footnote-ref-3":"inspecting_files/downloading_a_file","code-curl":"inspecting_files/downloading_a_file","aside-repeating_commands":"inspecting_files/downloading_a_file","sec-wordcount_and_pipes":"inspecting_files/making_heads_and_tails/wordcount_and_pipes","code-head_redirected":"inspecting_files/making_heads_and_tails/wordcount_and_pipes","code-head_pipe":"inspecting_files/making_heads_and_tails/wordcount_and_pipes","sec-exercises_head_tails":"inspecting_files/making_heads_and_tails/exercises_head_tails","ex-tail-wc":"inspecting_files/making_heads_and_tails/exercises_head_tails","ex-head-n":"inspecting_files/making_heads_and_tails/exercises_head_tails","ex-pipe-tail":"inspecting_files/making_heads_and_tails/exercises_head_tails","ex-tail-f":"inspecting_files/making_heads_and_tails/exercises_head_tails","sec-making_heads_and_tails":"inspecting_files/making_heads_and_tails","code-head":"inspecting_files/making_heads_and_tails","code-tail":"inspecting_files/making_heads_and_tails","sec-exercises_summary_less":"inspecting_files/less_is_more/exercises_summary_less","ex-less-pages":"inspecting_files/less_is_more/exercises_summary_less","ex-less-grep":"inspecting_files/less_is_more/exercises_summary_less","ex-less-slash":"inspecting_files/less_is_more/exercises_summary_less","ex-man-slash":"inspecting_files/less_is_more/exercises_summary_less","sec-less_is_more":"inspecting_files/less_is_more","cha-3_footnote-ref-5":"inspecting_files/less_is_more","fig-tudor_rose":"inspecting_files/less_is_more","cha-3_footnote-ref-6":"inspecting_files/less_is_more","cha-3_footnote-ref-7":"inspecting_files/less_is_more","code-rose_search":"inspecting_files/less_is_more","table-less_commands":"inspecting_files/less_is_more","sec-exercises_grep":"inspecting_files/grepping/exercises_grep","ex-grep-command":"inspecting_files/grepping/exercises_grep","ex-less-command-jump":"inspecting_files/grepping/exercises_grep","ex-grep-head":"inspecting_files/grepping/exercises_grep","ex-grep-case":"inspecting_files/grepping/exercises_grep","ex-grep-pipe-wc":"inspecting_files/grepping/exercises_grep","sec-grepping":"inspecting_files/grepping","code-grep_rose":"inspecting_files/grepping","code-grep_rose_wc":"inspecting_files/grepping","fig-man_grep":"inspecting_files/grepping","cha-3_footnote-ref-8":"inspecting_files/grepping","code-grep_i_wc":"inspecting_files/grepping","fig-regex_101":"inspecting_files/grepping","aside-ps_aux":"inspecting_files/grepping","sec-exercises_inspecting":"inspecting_files/summary_inspecting/exercises_inspecting","ex-history-pipe-grep":"inspecting_files/summary_inspecting/exercises_inspecting","ex-history-pipe-wc":"inspecting_files/summary_inspecting/exercises_inspecting","ex-history-pipe-grep-curl":"inspecting_files/summary_inspecting/exercises_inspecting","ex-bang-bang":"inspecting_files/summary_inspecting/exercises_inspecting","ex-curl-opts":"inspecting_files/summary_inspecting/exercises_inspecting","sec-summary_inspecting":"inspecting_files/summary_inspecting","table-inspecting_files":"inspecting_files/summary_inspecting","cha-inspecting_files":"inspecting_files","cha-3_footnotes":"inspecting_files","cha-3_footnote-1":"inspecting_files","cha-3_footnote-2":"inspecting_files","cha-3_footnote-3":"inspecting_files","cha-3_footnote-4":"inspecting_files","cha-3_footnote-5":"inspecting_files","cha-3_footnote-6":"inspecting_files","cha-3_footnote-7":"inspecting_files","cha-3_footnote-8":"inspecting_files","sec-exercises_structure":"directories/structure/exercises_structure","ex-speak-dir":"directories/structure/exercises_structure","ex-dir-comp":"directories/structure/exercises_structure","ex-dir-username":"directories/structure/exercises_structure","sec-structure":"directories/structure","fig-directory_folder":"directories/structure","cha-4_footnote-ref-1":"directories/structure","aside-sudo":"directories/structure","fig-sandwich":"directories/structure","sec-exercises_making_dirctories":"directories/making_directories/exercises_making_dirctories","ex-mkdir-p":"directories/making_directories/exercises_making_dirctories","ex-mkdir-heirarchy":"directories/making_directories/exercises_making_dirctories","ex-ls-pipe-grep":"directories/making_directories/exercises_making_dirctories","sec-making_directories":"directories/making_directories","sec-exercises_navigating_directories":"directories/navigating_directories/exercises_navigating_directories","ex-cd-tilde":"directories/navigating_directories/exercises_navigating_directories","ex-cd-double-dot":"directories/navigating_directories/exercises_navigating_directories","ex-create-empty-file":"directories/navigating_directories/exercises_navigating_directories","ex-remove-empty-file":"directories/navigating_directories/exercises_navigating_directories","sec-navigating_directories":"directories/navigating_directories","cha-4_footnote-ref-2":"directories/navigating_directories","aside-combining_commands":"directories/navigating_directories","sec-grep_redux":"directories/removing_directories/grep_redux","sec-exercises_mv_cp_rmdir":"directories/removing_directories/exercises_mv_cp_rmdir","ex-mkdir-sub-rm":"directories/removing_directories/exercises_mv_cp_rmdir","ex-copy-recursive":"directories/removing_directories/exercises_mv_cp_rmdir","ex-copy-not-recursive":"directories/removing_directories/exercises_mv_cp_rmdir","ex-rm-dir":"directories/removing_directories/exercises_mv_cp_rmdir","sec-removing_directories":"directories/removing_directories","code-cp_r":"directories/removing_directories","code-cp_slash":"directories/removing_directories","code-rm_rf":"directories/removing_directories","cha-4_footnote-ref-3":"directories/removing_directories","fig-spider_man":"directories/removing_directories","sec-exercises_summary_directories":"directories/summary_directories/exercises_summary_directories","ex-combined-commands":"directories/summary_directories/exercises_summary_directories","ex-combined-commands-again":"directories/summary_directories/exercises_summary_directories","ex-rm-f-danger":"directories/summary_directories/exercises_summary_directories","ex-rm-f-more-danger":"directories/summary_directories/exercises_summary_directories","sec-summary_directories":"directories/summary_directories","table-directories":"directories/summary_directories","sec-conclusion":"directories/conclusion","aside-additional_resources":"directories/conclusion","cha-directories":"directories","cha-4_footnotes":"directories","cha-4_footnote-1":"directories","cha-4_footnote-2":"directories","cha-4_footnote-3":"directories"},
+      footnotes: {"cha-0_footnote-1":" As discussed in \u003ca href=\"command_line_fragment.html#sec-basics\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e1\u003c/span\u003e\u003c/a\u003e, this statement applies to the \u003ca href=\"http://www.catb.org/esr/writings/taoup/html/\" target=\"_blank\" rel=\"noopener\"\u003e\u003cem\u003eUnix tradition\u003c/em\u003e\u003c/a\u003e, which is the principal computing tradition behind the Internet and the World Wide Web, and the tradition followed by this tutorial.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e In addition to being important for developers, knowing the command line is also essential for \u003ca href=\"https://en.wikipedia.org/wiki/System_administrator\" target=\"_blank\" rel=\"noopener\"\u003esystem administrators\u003c/a\u003e (sysadmins).","cha-0_footnote-2":" In a fairly typical turn of events, the name \u003cem\u003eUnix\u003c/em\u003e started as a \u003ca href=\"http://www.catb.org/jargon/html/U/Unix.html\" target=\"_blank\" rel=\"noopener\"\u003epun\u003c/a\u003e on a rival system called \u003cem\u003eMultics\u003c/em\u003e.","cha-0_footnote-3":" An IDE, or \u003cem\u003eintegrated development environment\u003c/em\u003e, integrates several development tools (such as a command line and a text editor) into one application.","cha-0_footnote-4":" An option is sometimes also called a \u003cem\u003eflag\u003c/em\u003e.","cha-0_footnote-5":" For example, when developing web applications, in addition to my main command-line tab I often have separate tabs for running a \u003ca href=\"https://www.railstutorial.org/book/beginning#sec-rails_server\" target=\"_blank\" rel=\"noopener\"\u003elocal web server\u003c/a\u003e and an \u003ca href=\"https://www.railstutorial.org/book/static_pages#sec-our_first_test\" target=\"_blank\" rel=\"noopener\"\u003eautomated test suite\u003c/a\u003e.","cha-0_footnote-6":" There are subtle differences between the two cases, but they aren’t important at the level of this tutorial.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Use your technical sophistication (\u003ca href=\"command_line_fragment.html#aside-technical_sophistication\" class=\"hyperref\"\u003eBox \u003cspan class=\"ref\"\u003e5\u003c/span\u003e\u003c/a\u003e) if you’re curious.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e \u003cem\u003eHint\u003c/em\u003e: \u003ca href=\"http://lmgtfy.com/?q=command+line+shell+single+double+quote+differences\" target=\"_blank\" rel=\"noopener\"\u003eGoogle searches\u003c/a\u003e are your friends.","cha-0_footnote-7":" Image retrieved from https://www.flickr.com/photos/pheezy/5875298232 on 2015-07-19.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2011 by Evan P. Cordes and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-0_footnote-8":" Many introductions to the command line cover elements of the shell that require knowledge of a text editor—knowledge which (as noted in the introduction) this tutorial does \u003cem\u003enot\u003c/em\u003e assume.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e As a result, we’ll defer these important topics to the follow-on tutorials to this one (\u003ca href=\"command_line_fragment.html#sec-conclusion\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e5\u003c/span\u003e\u003c/a\u003e), starting with \u003ca href=\"http://learnenough.com/text-editor-tutorial\" target=\"_blank\" rel=\"noopener\"\u003e\u003cem\u003eLearn Enough Text Editor to Be Dangerous\u003c/em\u003e\u003c/a\u003e.","cha-0_footnote-9":" Image retrieved from https://commons.wikimedia.org/wiki/File:Jazz_at_Knicks_man_to_man_defense.jpg on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2005 by Lordcolus and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-0_footnote-10":" Copyright © Randall Munroe and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by-nc/2.5/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-NonCommercial 2.5 Generic\u003c/a\u003e license.","cha-0_footnote-11":" There are also commands for moving one \u003cem\u003eword\u003c/em\u003e at a time (\u003ccode class=\"tt\"\u003eESC F\u003c/code\u003e and \u003ccode class=\"tt\"\u003eESC B\u003c/code\u003e), but I hardly ever use them myself, so it’s clear they are not required to be \u003cem\u003edangerous\u003c/em\u003e.","cha-0_footnote-12":" Note that the \u003ca href=\"http://originalpronunciation.com/\" target=\"_blank\" rel=\"noopener\"\u003eOriginal Pronunciation\u003c/a\u003e (OP) of Shakespearean English is different from modern pronunciation.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Generally speaking, Shakespeare’s sonnets include many word pairs that don’t rhyme in modern English but do in OP.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e In the case of \u003ca href=\"command_line_fragment.html#fig-sonnet_1\" class=\"hyperref\"\u003eFigure \u003cspan class=\"ref\"\u003e12\u003c/span\u003e\u003c/a\u003e, the word “memory” should be pronounced “MEM-or-aye”, leading to a rhyme between lines 2 and 4 (ending in \u003cem\u003edie\u003c/em\u003e and \u003cem\u003ememory\u003c/em\u003e, respectively).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Image retrieved from https://commons.wikimedia.org/wiki/File:Sonnet_1.jpg on 2015-07-20.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e This work is in the public domain and can be used without restriction.","cha-0_footnote-13":" Some keyboards lack an Option key, so obviously this trick won’t work on such systems.","cha-0_footnote-14":" Image retrieved from https://www.flickr.com/photos/tiffanyday/4076289684 on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright 2009 by Tiffa Day and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-0_footnote-15":"\u003cp\u003e From the essay “\u003ca href=\"http://www.paulgraham.com/say.html\" target=\"_blank\" rel=\"noopener\"\u003eWhat You Can’t Say\u003c/a\u003e” by \u003ca href=\"http://paulgraham.com\" target=\"_blank\" rel=\"noopener\"\u003ePaul Graham\u003c/a\u003e (2004).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e As Graham \u003ca href=\"http://www.paulgraham.com/saynotes.html\" target=\"_blank\" rel=\"noopener\"\u003enotes\u003c/a\u003e:\u003c/p\u003e\n\u003cblockquote class=\"quotation\"\u003e\n\u003cp class=\"quote\"\u003eThe verb “diff” is computer jargon, but it’s the only word with exactly the sense I want.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e It comes from the Unix \u003ccode class=\"tt\"\u003ediff\u003c/code\u003e utility, which yields a list of all the differences between two files.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e More generally it means an unselective and microscopically thorough comparison between two versions of something.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e\u003c/p\u003e\n\u003c/blockquote\u003e","cha-0_footnote-16":" A \u003cem\u003ebit\u003c/em\u003e is one piece of yes-or-no information (such as a 1 or a 0), and a \u003cem\u003ebyte\u003c/em\u003e is eight bits.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Bytes are probably most familiar from “megabytes” and “gigabytes”, which represent a million and a billion bytes, respectively.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e (The \u003ca href=\"https://en.wikipedia.org/wiki/Megabyte\" target=\"_blank\" rel=\"noopener\"\u003eofficial story\u003c/a\u003e is a little more complicated, but level of detail here is certainly enough to be \u003cem\u003edangerous\u003c/em\u003e.)","cha-0_footnote-17":" URL is short for \u003ca href=\"https://en.wikipedia.org/wiki/Uniform_Resource_Locator\" target=\"_blank\" rel=\"noopener\"\u003eUniform Resource Locator\u003c/a\u003e, and in practice usually just means “web address”.","cha-0_footnote-18":" \u003ca href=\"https://m.xkcd.com/1475/\" target=\"_blank\" rel=\"noopener\"\u003eTechnically\u003c/a\u003e, \u003ccode\u003ewhich\u003c/code\u003e locates a file on the user’s \u003cem\u003epath\u003c/em\u003e, which is a list of directories where executable programs are located.","cha-0_footnote-19":" If for any reason using \u003ccode\u003ecurl\u003c/code\u003e fails, you can always visit the URL in a browser and then use the \u003cstrong\u003eFile \u0026gt; Save As\u003c/strong\u003e feature to save it to your local disk.","cha-0_footnote-20":" Having known about \u003ccode\u003els -a\u003c/code\u003e and \u003ccode\u003els -rtl\u003c/code\u003e for a while—which together yield the suggestive command \u003ccode\u003els -artl\u003c/code\u003e—one day I decided to add an “h”’ (for \u003ca href=\"http://mhartl.com/\" target=\"_blank\" rel=\"noopener\"\u003eobvious reasons\u003c/a\u003e).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e This is actually how I accidentally discovered the useful \u003ccode\u003e-h\u003c/code\u003e option some years ago.","cha-0_footnote-21":" On some systems, apparently they’re \u003ca href=\"http://unix.stackexchange.com/questions/604/isnt-less-just-more\" target=\"_blank\" rel=\"noopener\"\u003eexactly the same program\u003c/a\u003e, so \u003ccode\u003eless\u003c/code\u003e really is \u003ccode\u003emore\u003c/code\u003e (or, more accurately, \u003ccode\u003emore\u003c/code\u003e is \u003ccode\u003eless\u003c/code\u003e).","cha-0_footnote-22":" Image retrieved from https://commons.wikimedia.org/wiki/File:Tudor_Rose.svg on 2015-07-21.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2011 by Sodacan and used unaltered under the \u003ca href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-ShareAlike 2.0 Generic\u003c/a\u003e license.","cha-0_footnote-23":" Although Shakespeare’s sonnets are undated, most of them were probably composed during the reign of \u003ca href=\"https://en.wikipedia.org/wiki/Elizabeth_I_of_England\" target=\"_blank\" rel=\"noopener\"\u003eQueen Elizabeth\u003c/a\u003e, whose \u003ca href=\"https://en.wikipedia.org/wiki/Tudor_dynasty\" target=\"_blank\" rel=\"noopener\"\u003eroyal house\u003c/a\u003e adopted a rose (\u003ca href=\"command_line_fragment.html#fig-tudor_rose\" class=\"hyperref\"\u003eFigure \u003cspan class=\"ref\"\u003e18\u003c/span\u003e\u003c/a\u003e) as its \u003ca href=\"https://en.wikipedia.org/wiki/Heraldry\" target=\"_blank\" rel=\"noopener\"\u003eheraldic emblem\u003c/a\u003e.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Given this context, Shakespeare’s choice of floral imagery isn’t surprising, but in fact only a few commentators on the \u003cem\u003eSonnets\u003c/em\u003e have \u003ca href=\"https://hankwhittemore.wordpress.com/tag/sonnet-1/\" target=\"_blank\" rel=\"noopener\"\u003enoticed\u003c/a\u003e the seemingly obvious reference.","cha-0_footnote-24":" Actually, “ROSE”, “RoSE”, “rOSE”, etc., all match as well, but “Rose” is the likeliest candidate.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Confirming this hunch is left as an exercise (\u003ca href=\"command_line_fragment.html#sec-exercises_grep\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e3.4.1\u003c/span\u003e\u003c/a\u003e).","cha-0_footnote-25":" Copyright © Randall Munroe and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by-nc/2.5/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-NonCommercial 2.5 Generic\u003c/a\u003e license.","cha-0_footnote-26":" My directory has a huge number of text files, ’cause that’s just how I roll, so the command I ran was actually \u003ccode\u003efind . -name '*.txt' | grep text_files\u003c/code\u003e, which filters out anything that doesn’t match the directory being used in this tutorial.","cha-0_footnote-27":" Image retrieved from https://www.flickr.com/photos/whatleydude/13950241545 on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2014 by James Whatley and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-0_footnote-28":" Image retrieved from https://www.flickr.com/photos/whatleydude/13950241545 on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2014 by James Whatley and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-1_footnote-1":" As discussed in \u003ca href=\"basics_fragment.html#cha-basics\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e1\u003c/span\u003e\u003c/a\u003e, this statement applies to the \u003ca href=\"http://www.catb.org/esr/writings/taoup/html/\" target=\"_blank\" rel=\"noopener\"\u003e\u003cem\u003eUnix tradition\u003c/em\u003e\u003c/a\u003e, which is the principal computing tradition behind the Internet and the World Wide Web, and the tradition followed by this tutorial.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e In addition to being important for developers, knowing the command line is also essential for \u003ca href=\"https://en.wikipedia.org/wiki/System_administrator\" target=\"_blank\" rel=\"noopener\"\u003esystem administrators\u003c/a\u003e (sysadmins).","cha-1_footnote-2":" In a fairly typical turn of events, the name \u003cem\u003eUnix\u003c/em\u003e started as a \u003ca href=\"http://www.catb.org/jargon/html/U/Unix.html\" target=\"_blank\" rel=\"noopener\"\u003epun\u003c/a\u003e on a rival system called \u003cem\u003eMultics\u003c/em\u003e.","cha-1_footnote-3":" An IDE, or \u003cem\u003eintegrated development environment\u003c/em\u003e, integrates several development tools (such as a command line and a text editor) into one application.","cha-1_footnote-4":" An option is sometimes also called a \u003cem\u003eflag\u003c/em\u003e.","cha-1_footnote-5":" For example, when developing web applications, in addition to my main command-line tab I often have separate tabs for running a \u003ca href=\"https://www.railstutorial.org/book/beginning#sec-rails_server\" target=\"_blank\" rel=\"noopener\"\u003elocal web server\u003c/a\u003e and an \u003ca href=\"https://www.railstutorial.org/book/static_pages#sec-our_first_test\" target=\"_blank\" rel=\"noopener\"\u003eautomated test suite\u003c/a\u003e.","cha-1_footnote-6":" There are subtle differences between the two cases, but they aren’t important at the level of this tutorial.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Use your technical sophistication (\u003ca href=\"basics_fragment.html#aside-technical_sophistication\" class=\"hyperref\"\u003eBox \u003cspan class=\"ref\"\u003e1.5\u003c/span\u003e\u003c/a\u003e) if you’re curious.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e \u003cem\u003eHint\u003c/em\u003e: \u003ca href=\"http://lmgtfy.com/?q=command+line+shell+single+double+quote+differences\" target=\"_blank\" rel=\"noopener\"\u003eGoogle searches\u003c/a\u003e are your friends.","cha-1_footnote-7":" Image retrieved from https://www.flickr.com/photos/pheezy/5875298232 on 2015-07-19.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2011 by Evan P. Cordes and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-1_footnote-8":" Many introductions to the command line cover elements of the shell that require knowledge of a text editor—knowledge which (as noted in the introduction) this tutorial does \u003cem\u003enot\u003c/em\u003e assume.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e As a result, we’ll defer these important topics to the follow-on tutorials to this one (\u003ca href=\"directories_fragment.html#sec-conclusion\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e4.6\u003c/span\u003e\u003c/a\u003e), starting with \u003ca href=\"http://learnenough.com/text-editor-tutorial\" target=\"_blank\" rel=\"noopener\"\u003e\u003cem\u003eLearn Enough Text Editor to Be Dangerous\u003c/em\u003e\u003c/a\u003e.","cha-1_footnote-9":" Image retrieved from https://commons.wikimedia.org/wiki/File:Jazz_at_Knicks_man_to_man_defense.jpg on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2005 by Lordcolus and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-1_footnote-10":" Copyright © Randall Munroe and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by-nc/2.5/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-NonCommercial 2.5 Generic\u003c/a\u003e license.","cha-1_footnote-11":" There are also commands for moving one \u003cem\u003eword\u003c/em\u003e at a time (\u003ccode class=\"tt\"\u003eESC F\u003c/code\u003e and \u003ccode class=\"tt\"\u003eESC B\u003c/code\u003e), but I hardly ever use them myself, so it’s clear they are not required to be \u003cem\u003edangerous\u003c/em\u003e.","cha-1_footnote-12":" Note that the \u003ca href=\"http://originalpronunciation.com/\" target=\"_blank\" rel=\"noopener\"\u003eOriginal Pronunciation\u003c/a\u003e (OP) of Shakespearean English is different from modern pronunciation.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Generally speaking, Shakespeare’s sonnets include many word pairs that don’t rhyme in modern English but do in OP.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e In the case of \u003ca href=\"basics_fragment.html#fig-sonnet_1\" class=\"hyperref\"\u003eFigure \u003cspan class=\"ref\"\u003e1.12\u003c/span\u003e\u003c/a\u003e, the word “memory” should be pronounced “MEM-or-aye”, leading to a rhyme between lines 2 and 4 (ending in \u003cem\u003edie\u003c/em\u003e and \u003cem\u003ememory\u003c/em\u003e, respectively).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Image retrieved from https://commons.wikimedia.org/wiki/File:Sonnet_1.jpg on 2015-07-20.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e This work is in the public domain and can be used without restriction.","cha-1_footnote-13":" Some keyboards lack an Option key, so obviously this trick won’t work on such systems.","cha-2_footnote-1":" Image retrieved from https://www.flickr.com/photos/tiffanyday/4076289684 on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright 2009 by Tiffa Day and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license.","cha-2_footnote-2":"\u003cp\u003e From the essay “\u003ca href=\"http://www.paulgraham.com/say.html\" target=\"_blank\" rel=\"noopener\"\u003eWhat You Can’t Say\u003c/a\u003e” by \u003ca href=\"http://paulgraham.com\" target=\"_blank\" rel=\"noopener\"\u003ePaul Graham\u003c/a\u003e (2004).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e As Graham \u003ca href=\"http://www.paulgraham.com/saynotes.html\" target=\"_blank\" rel=\"noopener\"\u003enotes\u003c/a\u003e:\u003c/p\u003e\n\u003cblockquote class=\"quotation\"\u003e\n\u003cp\u003eThe verb “diff” is computer jargon, but it’s the only word with exactly the sense I want.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e It comes from the Unix \u003ccode class=\"tt\"\u003ediff\u003c/code\u003e utility, which yields a list of all the differences between two files.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e More generally it means an unselective and microscopically thorough comparison between two versions of something.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e\u003c/p\u003e\n\u003c/blockquote\u003e","cha-2_footnote-3":" A \u003cem\u003ebit\u003c/em\u003e is one piece of yes-or-no information (such as a 1 or a 0), and a \u003cem\u003ebyte\u003c/em\u003e is eight bits.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Bytes are probably most familiar from “megabytes” and “gigabytes”, which represent a million and a billion bytes, respectively.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e (The \u003ca href=\"https://en.wikipedia.org/wiki/Megabyte\" target=\"_blank\" rel=\"noopener\"\u003eofficial story\u003c/a\u003e is a little more complicated, but level of detail here is certainly enough to be \u003cem\u003edangerous\u003c/em\u003e.)","cha-3_footnote-1":" URL is short for \u003ca href=\"https://en.wikipedia.org/wiki/Uniform_Resource_Locator\" target=\"_blank\" rel=\"noopener\"\u003eUniform Resource Locator\u003c/a\u003e, and in practice usually just means “web address”.","cha-3_footnote-2":" \u003ca href=\"https://m.xkcd.com/1475/\" target=\"_blank\" rel=\"noopener\"\u003eTechnically\u003c/a\u003e, \u003ccode\u003ewhich\u003c/code\u003e locates a file on the user’s \u003cem\u003epath\u003c/em\u003e, which is a list of directories where executable programs are located.","cha-3_footnote-3":" If for any reason using \u003ccode\u003ecurl\u003c/code\u003e fails, you can always visit the URL in a browser and then use the \u003cstrong\u003eFile \u0026gt; Save As\u003c/strong\u003e feature to save it to your local disk.","cha-3_footnote-4":" Having known about \u003ccode\u003els -a\u003c/code\u003e and \u003ccode\u003els -rtl\u003c/code\u003e for a while—which together yield the suggestive command \u003ccode\u003els -artl\u003c/code\u003e—one day I decided to add an “h”’ (for \u003ca href=\"http://mhartl.com/\" target=\"_blank\" rel=\"noopener\"\u003eobvious reasons\u003c/a\u003e).\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e This is actually how I accidentally discovered the useful \u003ccode\u003e-h\u003c/code\u003e option some years ago.","cha-3_footnote-5":" On some systems, apparently they’re \u003ca href=\"http://unix.stackexchange.com/questions/604/isnt-less-just-more\" target=\"_blank\" rel=\"noopener\"\u003eexactly the same program\u003c/a\u003e, so \u003ccode\u003eless\u003c/code\u003e really is \u003ccode\u003emore\u003c/code\u003e (or, more accurately, \u003ccode\u003emore\u003c/code\u003e is \u003ccode\u003eless\u003c/code\u003e).","cha-3_footnote-6":" Image retrieved from https://commons.wikimedia.org/wiki/File:Tudor_Rose.svg on 2015-07-21.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2011 by Sodacan and used unaltered under the \u003ca href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-ShareAlike 2.0 Generic\u003c/a\u003e license.","cha-3_footnote-7":" Although Shakespeare’s sonnets are undated, most of them were probably composed during the reign of \u003ca href=\"https://en.wikipedia.org/wiki/Elizabeth_I_of_England\" target=\"_blank\" rel=\"noopener\"\u003eQueen Elizabeth\u003c/a\u003e, whose \u003ca href=\"https://en.wikipedia.org/wiki/Tudor_dynasty\" target=\"_blank\" rel=\"noopener\"\u003eroyal house\u003c/a\u003e adopted a rose (\u003ca href=\"inspecting_files_fragment.html#fig-tudor_rose\" class=\"hyperref\"\u003eFigure \u003cspan class=\"ref\"\u003e3.1\u003c/span\u003e\u003c/a\u003e) as its \u003ca href=\"https://en.wikipedia.org/wiki/Heraldry\" target=\"_blank\" rel=\"noopener\"\u003eheraldic emblem\u003c/a\u003e.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Given this context, Shakespeare’s choice of floral imagery isn’t surprising, but in fact only a few commentators on the \u003cem\u003eSonnets\u003c/em\u003e have \u003ca href=\"https://hankwhittemore.wordpress.com/tag/sonnet-1/\" target=\"_blank\" rel=\"noopener\"\u003enoticed\u003c/a\u003e the seemingly obvious reference.","cha-3_footnote-8":" Actually, “ROSE”, “RoSE”, “rOSE”, etc., all match as well, but “Rose” is the likeliest candidate.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Confirming this hunch is left as an exercise (\u003ca href=\"inspecting_files_fragment.html#sec-exercises_grep\" class=\"hyperref\"\u003eSection \u003cspan class=\"ref\"\u003e3.4.1\u003c/span\u003e\u003c/a\u003e).","cha-4_footnote-1":" Copyright © Randall Munroe and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by-nc/2.5/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution-NonCommercial 2.5 Generic\u003c/a\u003e license.","cha-4_footnote-2":" My directory has a huge number of text files, ’cause that’s just how I roll, so the command I ran was actually \u003ccode\u003efind . -name '*.txt' | grep text_files\u003c/code\u003e, which filters out anything that doesn’t match the directory being used in this tutorial.","cha-4_footnote-3":" Image retrieved from https://www.flickr.com/photos/whatleydude/13950241545 on 2015-07-22.\u003cspan class=\"intersentencespace\"\u003e\u003c/span\u003e Copyright © 2014 by James Whatley and used unaltered under the terms of the \u003ca href=\"https://creativecommons.org/licenses/by/2.0/\" target=\"_blank\" rel=\"noopener\"\u003eCreative Commons Attribution 2.0 Generic\u003c/a\u003e license."},
+      s3_path_prefix: "636/learn_enough_command_line",
+      custom_math: "\"ccby\": \"\\\\href{https://creativecommons.org/licenses/by/2.0/}{Creative Commons Attribution 2.0 Generic}\",\n\"ccbysa\": \"\\\\href{https://creativecommons.org/licenses/by-sa/2.0/}{Creative Commons Attribution-ShareAlike 2.0 Generic}\",\n\"xkcduse\": \"Copyright © Randall Munroe and used unaltered under the terms of the \\\\href{https://creativecommons.org/licenses/by-nc/2.5/}{Creative Commons Attribution-NonCommercial 2.5 Generic} license.\",\n\"lejs\": \"\\\\href{http://learnenough.com/javascript-tutorial}{\\\\emph{Learn Enough JavaScript to Be Dangerous}}\",\n\"ler\": \"\\\\href{https://www.learnenough.com/ruby-tutorial}{\\\\emph{Learn Enough Ruby to Be Dangerous}}\",\n\"lete\": \"\\\\href{https://www.learnenough.com/text-editor-tutorial}{\\\\emph{Learn Enough Text Editor to Be Dangerous}}\""
+    });
+  });
+  
+  $(document).ready(function() {
+    bookScroll();
+  });
+</script>
+
+
+<footer class='footer'>
+<nav class='footer-nav'>
+<a class="logoLink artLogo" href="/"><div class='svg le-logo'><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 801 1041" style="enable-background:new 0 0 801 1041;" xml:space="preserve">
+<path d="M569.9,478.6l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H410.5l-3.5,3.5v358.6l1,2.5l24.3,24.3l1.9,0.5l0.5,0.5h135.1l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H488v-89.9h77l3.5-3.5v-41.7l-1-2.5l-24.3-24.3l-2.5-1H488v-81H569.9z M544.2,412.6l17.3,17.3H436.2L419,412.6H544.2z M414,417.6l17.3,17.3v348.7L414,766.3V417.6z M544.2,729.5l17.3,17.3H488v-17.3H544.2z M539.2,566.6l17.3,17.3H488v-17.3H539.2z M484.5,471.6l-3.5,3.5v112.3l3.5,3.5h77v34.7h-77l-3.5,3.5v121.2l3.5,3.5h81.9v34.7H438.3V436.9h128.1v34.7H484.5z"/>
+<path d="M401.5,747.8l-24.3-24.3l-2.5-1h-55.7V433.4l-0.2-0.2l-0.8-2.3l-24.3-24.3l-2.5-1h-49.7l-3.5,3.5v358.6l1,2.5l24.3,24.3l1.9,0.5l0.6,0.6H399l3.5-3.5v-41.7L401.5,747.8z M373.3,729.5l17.3,17.3h-71.5v-17.3H373.3z M307.1,429.9h-39.8l-17.3-17.3h39.8L307.1,429.9z M245.1,417.6l17.3,17.3v348.7l-17.3-17.3V417.6z M395.5,788.5H269.4V436.9h42.7v313.4l3.5,3.5h79.9V788.5z"/>
+<path d="M691.8,600.3c0-77.2-30-149.7-84.6-204.3c-47.3-47.3-108.2-76.2-173.9-83c0.4-22.2,0.6-35.3,0.6-35.7l-2.6-3.8c-1.8-0.6-3.5-2.2-5.1-4.2l5.1,0c1.8,0.1,22.1,0.8,33.2-11.2c5.5-6,8.5-14,8.5-23.4l0.1-13.3l-3.5-3.5l-16-0.1l-3.5,3.5l-0.1,13.3c0,3.3-0.7,5.5-2.4,7.3c-3.7,4-12.4,4.9-15.4,4.9l-11.9,0c1.4-13.4,3.7-39.7,3.9-72.2c0.1-34.4-5.7-68.9-6.6-73.7c4.9-5.8,7.6-13.5,7.6-21.6C425.2,62,413,47.9,398,47.8c0,0-0.1,0-0.1,0c-15,0-27.2,14-27.3,31.2c0,8.1,2.6,15.8,7.5,21.7c-0.9,4.8-7,39.3-7.2,73.6c-0.1,32.5,2,58.9,3.3,72.3l-11.1,0c-1.8-0.1-22.1-0.8-33.2,11.2c-5.5,6-8.5,14-8.5,23.4l-0.1,13.3l3.5,3.5l16.2,0.1l3.5-3.5l0.1-13.3c0-3.3,0.7-5.5,2.4-7.3c3.7-4,12.3-4.9,15.3-4.9l5.9,0c-1.6,1.9-3.4,3.5-5.2,4.1l-2.6,3.8c0,0.5,0.2,14.2,0.6,37.4c-61.2,8.9-117.8,37.1-162.3,81.6C144.1,450.6,114,523.1,114,600.3s30,149.7,84.6,204.3c49,49,112.4,78.2,180.7,83.7c6.4,96.9,11.7,103.7,14.1,106.6l3.3,2.6l2.9-2.6c2.4-2.9,7.8-9.7,14.3-105.9c73-2.7,141.3-32.4,193.2-84.4C661.8,750,691.8,677.5,691.8,600.3z M377.6,79.1c0.1-13.4,9.1-24.2,20.3-24.2c0,0,0,0,0.1,0c7.7,0,14.5,5.3,17.8,13l-10.6-4.3c1.1,1.6,2.1,3.4,2.8,5.5l9.4,3.8c0.5,2,0.7,4.2,0.7,6.4c0,0.2,0,0.5,0,0.7l-8.4-3.4c0.1,0.8,0.1,1.7,0.1,2.5c0,0.6,0,1.2-0.1,1.8l8,3.2c-0.4,2.1-1,4.2-1.8,6.1l-7.3-2.9c-0.4,1.3-0.9,2.6-1.4,3.7l6.8,2.8c-0.6,1-1.3,1.9-2,2.8c-0.7,0.8-1.5,1.6-2.3,2.3l-0.8-0.3l-5.3-2.2c-1.1,1.2-2.3,2.1-3.6,2.9l5.7,2.3c-2.5,1.2-5.1,1.9-7.9,1.9c-5.3,0-10.3-2.5-14.1-7C379.8,91.9,377.6,85.7,377.6,79.1z M377.9,174.4c0.1-28.2,4.4-57,6.3-68.1c4.1,2.7,8.7,4.2,13.5,4.2c0,0,0.1,0,0.1,0c4.8,0,9.4-1.4,13.5-4.1c0.2,1.3,0.5,2.9,0.7,4.7l-2.1-0.9l-2.9,3.1l5.7,2.3c0.3,2.2,0.6,4.6,1,7.3l-17.4-7.1c0.2,1.4,0.4,3,0.6,4.6l17.3,7c0.3,2.3,0.5,4.7,0.8,7.2l-17.2-7c0.2,1.5,0.3,3,0.5,4.5l17.2,7c0.2,2.3,0.4,4.7,0.6,7.1l-19.6-8c-1.7,0.1-3.7-0.4-3.7-0.4s0.8,1.7,1.9,4l21.7,8.8c0.2,2.3,0.3,4.7,0.4,7l-18.3-7.4c0.9,2.1,1.5,3.9,1.7,5l16.8,6.8c0.1,2.3,0.1,4.6,0.2,6.9l-16.6-6.7c0.1,1.5,0.1,2.9,0.1,4.4l16.5,6.7c0,0.4,0,0.8,0,1.2c0,1.9,0,3.8,0,5.7l-16.7-6.8c-1.1,1.7-5.8-0.2-5.8-0.2s0.4,1,0.9,2.5l21.6,8.7c0,2.3-0.1,4.6-0.2,6.8l-18.6-7.5c0.6,1.8,1.2,3.6,1.6,5l16.9,6.8c-0.1,2.3-0.2,4.6-0.3,6.8l-16.2-6.6c0,1.5-0.1,2.9-0.2,4.3l16.2,6.6c-0.1,2.3-0.2,4.5-0.4,6.7l-16.1-6.5c0,0.7-0.1,1.4-0.1,2.1c0,0.9-0.4,1.4-0.8,1.8l16.8,6.8c-0.1,2.3-0.3,4.5-0.5,6.7l-20-8.1c0.3,1.4,0.7,3.1,1.1,4.7l18.6,7.6c-0.2,2.3-0.4,4.6-0.6,6.6l-16.6-6.8c0.3,1.8,0.4,3.3,0.4,4.1c0,0.1,0,0.2,0,0.3l15.9,6.5c-0.2,2.5-0.5,4.7-0.7,6.6l-15.9-6.4c-0.1,1.5-0.3,2.9-0.4,4.2l8,3.2l-23.7-0.1C380,233.6,377.8,207,377.9,174.4z M362.3,262.1c-1.4,0-14,0.2-20.4,7.1c-2.8,3-4.2,7-4.2,12l0,9.8l-9.2,0l0-9.8c0-7.5,2.3-14,6.6-18.6l0,0c9.1-9.8,27.6-9,27.8-9l69.2,0.2c1.4,0,14.1-0.2,20.6-7.1c2.8-3,4.2-7,4.2-12l0-9.8l9,0l0,9.8c0,7.5-2.3,14-6.6,18.6c-9.1,9.8-27.6,9-27.8,9L362.3,262.1z M407.6,348.5l1.1,0.4h-1.1L407.6,348.5z M403.6,348.9h-5.3l-3.5-79.8l17.2,0.1L403.6,348.9z M408.1,344.3l0.7-6.6l15.9,6.4c0,1.6-0.1,3.1-0.1,4.7h-5.2L408.1,344.3z M409.2,333.6l0.7-6.6l15,6.1c0,2.2-0.1,4.5-0.1,6.8L409.2,333.6z M410.3,322.9l0.7-6.6l14.1,5.7c0,2.2-0.1,4.5-0.1,6.8L410.3,322.9z M411.5,312.2l0.7-6.6l13.1,5.3c0,2.2-0.1,4.5-0.1,6.8L411.5,312.2z M412.6,301.4l0.7-6.6l12.2,4.9c0,2.1-0.1,4.4-0.1,6.8L412.6,301.4z M413.7,290.7l0.7-6.6l11.3,4.6c0,2-0.1,4.3-0.1,6.8L413.7,290.7z M414.9,280l0.7-6.6l5.5,2.2c1.5,1.6,3.1,3,4.8,4c0,1.2,0,2.8-0.1,4.8L414.9,280z M416,269.3L416,269.3l0.3,0c0,0.1,0.1,0.1,0.1,0.2L416,269.3z M390.3,348.9h-20.7c-0.7-36.5-1.1-61.7-1.2-69.5c3.9-2.4,7.2-6.4,9.6-10.3l8.8,0L390.3,348.9z M392.6,951.2c-2-18-4.2-44.3-6.4-82.7c-0.3-5.2-0.6-10.6-0.9-16.2h7.4l2.5,115.9L392.6,951.2z M400.7,959.3l-0.1-20.9l1,0.2C401.4,940.3,400.8,957.7,400.7,959.3z M401.6,934.5l-1-0.4v-6.9l1.7,0.7C402.1,930.2,401.8,932.4,401.6,934.5z M402.7,923.8l-2.2-0.9v-6.9l2.8,1.1C403.2,919.4,403,921.6,402.7,923.8z M403.8,913l-3.2-1.3l0-6.9l3.8,1.6C404.2,908.7,404,910.9,403.8,913z M404.8,902.3l-4.2-1.7v-6.9l4.8,1.9C405.2,897.8,405,900.1,404.8,902.3z M405.7,891.4l-5.1-2.1l0-6.9l5.6,2.3C406,887,405.9,889.2,405.7,891.4z M406.5,880.6l-5.9-2.4l0-6.9l6.4,2.6C406.8,876.1,406.6,878.4,406.5,880.6z M407.3,868.6c0,0.4,0,0.7-0.1,1.1l-6.6-2.7l0-6.9l7,2.8C407.5,864.9,407.4,866.8,407.3,868.6z M407.9,858.8l-7.3-2.9l0-3.5h7.6C408.1,854.5,408,856.6,407.9,858.8z M414.5,880.9c0.6-8.8,1.2-18.3,1.7-28.6h27v-7h-91v7h25c0.6,10,1.1,19.2,1.6,27.8c-66-5.6-127.2-33.9-174.6-81.2C151.2,745.9,122,675.3,122,600.3s29.2-145.6,82.3-198.6c43.1-43.1,97.6-70.4,156.8-79.2c0.1,7.9,0.3,16.8,0.5,26.4h-16.1v7h109.8v-7h-22.7c0.2-10.2,0.4-19.6,0.5-27.9c63.6,6.8,122.6,34.8,168.4,80.7c53.1,53.1,82.3,123.6,82.3,198.6s-29.2,145.6-82.3,198.6C551.2,849.2,485.2,878.1,414.5,880.9z"/>
+</svg>
+</div>
+<span>LEARN ENOUGH</span>
+</a><ul class='footer-sub-menu'>
+<li><a href="/story">The LE Story</a></li>
+<li><a href="http://news.learnenough.com">News</a></li>
+<li><a href="/courses">Courses</a></li>
+<li><a href="/login">Log In</a></li>
+<li><a href="/subscribe">Register</a></li>
+</ul>
+</nav>
+<ul class='footer-sub-menu'>
+<li><a href="/about">About</a></li>
+<li><a href="/legal">Legal</a></li>
+<li><a href="/cdn-cgi/l/email-protection#bdcec8cdcdd2cfc9fdd1d8dccfd3d8d3d2c8dad593ded2d0">Contact</a></li>
+</ul>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+    // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/54eea5d20a23b37d87000040.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+
+</div>
+</div>
+</body>
+</html>
+<script>
+  if (localStorage['headPush'] == 'yes') {
+    $('.header-push').addClass('header-push-closed');
+  };
+</script>
+<script>
+  if (localStorage['sideOpen'] == 'no') {
+    $('body').addClass('side-menu-closed');
+  };
+  bookCheckMobile();
+</script>
